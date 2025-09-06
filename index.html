@@ -1,12 +1,85 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!-- Charset and Viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title & Description -->
     <title>King James Bible — React</title>
+    <meta
+      name="description"
+      content="Read the King James Bible online. Browse by book, chapter, and verse with a clean, modern interface built with React."
+    />
+
+    <!-- SEO / Social Preview -->
+    <meta property="og:title" content="King James Bible — React" />
+    <meta
+      property="og:description"
+      content="Read the King James Bible online with easy navigation for books, chapters, and verses."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <meta property="og:image" content="/bible-preview.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Fonts (Google Fonts Example) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#9c2a1a" />
+
+    <!-- CSS Reset or Global Styles (Optional) -->
+    <style>
+      /* Reset some default styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html, body {
+        font-family: 'Open Sans', sans-serif;
+        background: #f9f9f9;
+        color: #333;
+        min-height: 100%;
+      }
+
+      #root {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Loading fallback */
+      .loading-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 1.5rem;
+        color: #9c2a1a;
+        background: #fff;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- React App Root -->
+    <div id="root">
+      <div class="loading-screen">Loading King James Bible...</div>
+    </div>
+
+    <!-- React Entry Point -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
